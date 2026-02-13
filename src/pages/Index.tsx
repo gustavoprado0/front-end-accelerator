@@ -18,7 +18,6 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero */}
       <header className="bg-gradient-hero py-16 px-6 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,hsl(var(--glow)/0.08),transparent_60%)]" />
         <div className="max-w-4xl mx-auto relative">
@@ -40,12 +39,11 @@ const Index = () => {
             </p>
           </motion.div>
 
-          {/* Stats */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="grid grid-cols-3 gap-4"
+            className="grid grid-cols-1 sm:grid-cols-3 gap-4"
           >
             {[
               { icon: Target, label: 'Skills', value: skills.length },
@@ -62,13 +60,12 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Main */}
       <main className="max-w-4xl mx-auto px-6 py-10">
         <Tabs defaultValue="skills" className="space-y-8">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <TabsList className="bg-muted">
-              <TabsTrigger value="skills">⚡ Minhas Skills</TabsTrigger>
-              <TabsTrigger value="roadmap">🗺️ Roadmap</TabsTrigger>
+              <TabsTrigger value="skills"> Minhas Skills</TabsTrigger>
+              <TabsTrigger value="roadmap">Roadmap</TabsTrigger>
             </TabsList>
             <TabsContent value="skills" className="mt-0">
               <AddSkillForm />
@@ -112,15 +109,14 @@ const Index = () => {
               </div>
               <RoadmapTimeline />
 
-              {/* Tech Stack Box */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
                 className="mt-10 glass rounded-xl p-6 shadow-card"
               >
-                <h3 className="font-semibold text-foreground mb-4">🛠️ Stack Recomendada</h3>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-3 text-sm">
+                <h3 className="font-semibold text-foreground mb-4">Stack Recomendada</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-sm">
                   {[
                     { name: 'Vite', desc: 'Build tool' },
                     { name: 'TanStack Router', desc: 'Roteamento' },

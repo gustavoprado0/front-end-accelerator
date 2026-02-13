@@ -56,7 +56,7 @@ const AddSkillForm = () => {
           >
             <Button
               onClick={() => setIsOpen(true)}
-              className="bg-gradient-primary text-primary-foreground hover:opacity-90 shadow-glow"
+              className="w-full bg-gradient-primary text-primary-foreground hover:opacity-90 shadow-glow"
             >
               <Plus className="h-4 w-4 mr-2" />
               Nova Skill
